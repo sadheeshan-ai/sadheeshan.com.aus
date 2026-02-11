@@ -177,3 +177,4 @@ h1{font-size:42px;line-height:1.08;margin:14px 0 10px;letter-spacing:-.03em;}
   pointer-events:none;
 }
 .hero-grid{position:relative;z-index:1;}
+#top { position: absolute; top: 0; left: 0; }
