@@ -20,7 +20,7 @@
 *{box-sizing:border-box}
 html{
   scroll-behavior: smooth;
-  scroll-padding-top: 90px; /* prevents sticky header hiding the target */
+  scroll-padding-top: 90px;
 }
 html,body{margin:0;padding:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--text);background:radial-gradient(1200px 800px at 20% -10%, rgba(1,33,105,.14), transparent 55%), radial-gradient(900px 600px at 100% 10%, rgba(255,184,28,.18), transparent 45%), linear-gradient(180deg, var(--bg), var(--bg-2));}
 
