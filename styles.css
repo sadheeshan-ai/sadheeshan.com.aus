@@ -118,6 +118,7 @@ a:hover{text-decoration:underline}
   object-fit:cover;
   border-radius:10px;
   display:block;
+  background:#fff;   /* prevents dark-edge bleed */
 }
 
 /* Nav */
