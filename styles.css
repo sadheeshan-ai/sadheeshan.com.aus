@@ -102,11 +102,13 @@ a:hover{text-decoration:underline}
   min-width:220px;
 }
 .mark{
-  width:36px;
-  height:36px;
-  border-radius:12px;
-  background:linear-gradient(135deg,var(--primary),var(--accent-2));
-  box-shadow:var(--shadow);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:transparent;   /* remove gradient */
+  box-shadow:none;
+  width:auto;
+  height:auto;
 }
 .brand-name{font-weight:700;letter-spacing:-.02em;}
 .brand-tag{font-size:12.5px;color:var(--muted);margin-top:2px;}
@@ -114,11 +116,11 @@ a:hover{text-decoration:underline}
 /* Flag icon */
 .au-flag-icon{
   width:34px;
-  height:34px;
-  object-fit:cover;
-  border-radius:10px;
+  height:auto;        /* keep natural ratio */
+  max-height:24px;    /* prevents it from being too tall */
+  object-fit:contain; /* show full image */
+  border-radius:4px;  /* smaller radius for real flag look */
   display:block;
-  background:#fff;   /* prevents dark-edge bleed */
 }
 
 /* Nav */
