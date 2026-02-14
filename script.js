@@ -34,5 +34,23 @@
 
     e.preventDefault();
     target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    document.addEventListener("DOMContentLoaded", () => {
+  const toggle = document.querySelector(".nav-toggle");
+  const navList = document.querySelector(".nav-list");
+
+  if (!toggle || !navList) return;
+
+  toggle.addEventListener("click", () => {
+    const isOpen = toggle.getAttribute("aria-expanded") === "true";
+    toggle.setAttribute("aria-expanded", String(!isOpen));
+    navList.classList.toggle("is-open", !isOpen);
+  });
+
+  // Optional: close menu after tapping a link (nice on mobile)
+  navList.addEventListener("click", (e) => {
+    const link = e.target.closest("a");
+    if (!link) return;
+    toggle.setAttribute("aria-expanded", "false");
+    navList.classList.remove("is-open");
   });
 });
